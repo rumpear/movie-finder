@@ -1,0 +1,97 @@
+.authors {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title {
+    @include font(500, 24px, 20px);
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left: -10px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 25%;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+
+.author {
+  position: relative;
+  height: 200px;
+  width: 200px;
+  background: grey;
+  border-radius: 10px;
+  transition: background 0.8s;
+  overflow: hidden;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: center center no-repeat;
+  background-size: 200px;
+
+  &:hover {
+    background: left center no-repeat;
+    background-size: 290px;
+
+    & .author__title {
+      opacity: 1;
+    }
+
+    & .author__icons {
+      opacity: 1;
+    }
+  }
+
+  &__card {
+    height: 195px;
+    width: 195px;
+    background: transparent;
+    border-radius: 10px;
+    transition: border 1s;
+    position: relative;
+
+    &:hover {
+      border: 1px solid white;
+    }
+  }
+
+  &__icons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    display: flex;
+    opacity: 0;
+    transition: opacity 1s;
+    transform: translateX(-50%);
+  }
+
+  &__icon {
+    margin-right: 5px;
+
+    &:first-child {
+      margin-right: 9px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__title {
+    color: #fff;
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 1s;
+  }
+}

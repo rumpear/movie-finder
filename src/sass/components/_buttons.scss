@@ -1,0 +1,246 @@
+.close-modal-button {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 30px;
+  height: 30px;
+
+  cursor: pointer;
+  background-color: transparent;
+
+  &:hover .close-modal-button__icon {
+    fill: $accent-color;
+  }
+}
+
+.close-modal-button__icon {
+  fill: currentColor;
+  width: 26px;
+  height: 26px;
+  transition: fill $animation-duration $bezier-transition;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  height: 40px;
+  padding: 0 15px;
+  border-radius: 8px;
+  transition: box-shadow $ease-transition;
+  background-color: $white-color;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: $grey-shadow;
+  }
+
+  &__icon {
+    width: 30px;
+  }
+
+  &__title {
+    @include font(400, 18px, 32px, $light-grey);
+    transition: color $ease-transition;
+  }
+
+  &:hover &__title {
+    color: $black-color;
+  }
+}
+
+.button-logout {
+  background-color: transparent;
+  padding: 4px;
+  color: #fff;
+  transition: color $ease-transition;
+  margin-top: 20px;
+
+  @include breakpoint(tablet) {
+    margin: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $accent-color;
+  }
+}
+
+.button-library {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 110px;
+  max-height: 60px;
+
+  border-radius: 5px;
+  padding: 13px;
+  background-color: transparent;
+  border: 1px solid #000;
+  text-transform: uppercase;
+  @include font(500, 12px, 16px);
+
+  transition: background-color $animation-duration $bezier-transition,
+    border-color $animation-duration $bezier-transition,
+    color $animation-duration $bezier-transition;
+
+  &:hover,
+  &:focus,
+  &.is-active {
+    cursor: pointer;
+    color: $white-color;
+    border-color: $accent-color;
+    background-color: $accent-color;
+  }
+
+  &.is-active {
+    cursor: pointer;
+    color: $white-color;
+    border-color: $accent-color;
+    background-color: $accent-color;
+    padding: 8.5px;
+  }
+}
+
+.btn-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  text-align: center;
+  border: none;
+
+  position: fixed;
+  right: 30px;
+  bottom: 15px;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $accent-color;
+
+  opacity: 1;
+  transition: opacity $animation-duration $bezier-transition,
+    visibility $animation-duration $bezier-transition,
+    background-color $animation-duration $bezier-transition,
+    fill $animation-duration $bezier-transition;
+
+  &:hover {
+    background-color: #ff6b08da;
+  }
+}
+
+.btn-up__icon {
+  fill: rgb(239, 239, 239);
+  transition: fill $animation-duration $bezier-transition;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.watch-trailer-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  width: 70px;
+  height: 49px;
+
+  border-radius: 16px;
+  border: solid 1px #f61c0d;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    border: solid 1px #ff1100b7;
+  }
+
+  &:hover .watch-trailer-btn__icon {
+    fill: #ff1100b7;
+  }
+  & > .watch-trailer-btn__icon {
+    pointer-events: none;
+  }
+}
+
+.watch-trailer-btn__icon {
+  width: 100px;
+  height: 70px;
+  fill: #f61c0d;
+  transition: fill $animation-duration $bezier-transition;
+}
+
+.sharing {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10px;
+
+  &__item {
+    margin-right: 5px;
+
+    &:first-child {
+      margin-right: 10px;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__button {
+    background-color: transparent;
+    transform: scale(1);
+    transition: transform $ease-transition;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.2);
+    }
+  }
+
+  &__icon {
+  }
+}
+
+.categories {
+  display: flex;
+
+  &.is-closed {
+    display: none;
+  }
+
+  &__label {
+    display: block;
+    margin-right: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: $black-color;
+    background-color: $white-color;
+    transition: background-color $ease-transition, color $ease-transition;
+
+    &:hover {
+      cursor: pointer;
+      color: $white-color;
+      background-color: $accent-color;
+    }
+  }
+
+  &__input:checked + &__label {
+    color: $white-color;
+    background-color: $accent-color;
+  }
+}

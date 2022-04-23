@@ -1,0 +1,39 @@
+@mixin centered-flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin font($fw, $fs, $lh, $fc: #000, $ls: 0) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh / $fs;
+  color: $fc;
+  letter-spacing: $ls;
+}
+
+@mixin animate-active {
+  height: 0;
+  transform: scaleY(0);
+  transition: transform ease-in 300ms, height ease-in 300ms;
+  &.active {
+    height: auto;
+    transform: scaleY(1);
+  }
+}
+
+@mixin breakpoint($point) {
+  @if $point == desktop {
+    @media screen and (min-width: $desktop) {
+      @content;
+    }
+  } @else if $point == tablet {
+    @media screen and (min-width: $tablet) {
+      @content;
+    }
+  } @else if $point == mobile {
+    @media screen and (max-width: $phone) {
+      @content;
+    }
+  }
+}

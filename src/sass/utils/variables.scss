@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+$ff-main: 'Roboto', sans-serif;
+$fs-link: 12px;
+$secondary-color: #545454;
+$accent-color: #ff6b08;
+$accent-color-dark: #e2935e;
+$white-color: #fff;
+$black-color: #000;
+$grey-bg: #f7f7f7;
+$light-grey: #00000054;
+$fade-bg: #00000080;
+$error-color: #ff001b;
+$accent-shadow: 0px 0px 6px 2px #ff6b0880;
+$grey-shadow: 0px 0px 4px 1px #f7f7f7;
+$bg-gradient: linear-gradient(#00000056, #00000056);
+$dark-theme-shadow: 0 0 12px 5px #ff6b0880;
+
+$animation-duration: 250ms;
+$bezier-transition: cubic-bezier(0.4, 0, 0.2, 1);
+$ease-transition: 250ms ease-in-out;

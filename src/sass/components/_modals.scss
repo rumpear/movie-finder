@@ -1,0 +1,71 @@
+.modal {
+  position: relative;
+  max-width: 340px;
+
+  margin-left: auto;
+  margin-right: auto;
+
+  padding: 40px 20px 15px;
+
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  background-color: $white-color;
+  border-radius: 5px;
+
+  @include breakpoint(tablet) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    max-width: 704px;
+    padding: 40px 36px;
+  }
+
+  @include breakpoint(desktop) {
+    max-width: 814px;
+    padding: 40px 16px;
+  }
+}
+
+// .modal {
+//   // position: relative;
+
+//   max-width: 340px;
+//   margin-left: auto;
+//   margin-right: auto;
+
+//   transform: scale(1);
+//   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+//   background-color: $white-color;
+//   border-radius: 5px;
+//   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+//     0px 2px 1px rgba(0, 0, 0, 0.2);
+
+//   padding: 50px 20px 40px 20px;
+
+//   // display: flex;
+//   // flex-direction: column;
+//   // flex-wrap: wrap;
+
+//   @include breakpoint(tablet) {
+//     max-width: 704px;
+//     // padding: 40px 36px 10px;
+
+//     // flex-direction: row;
+//     // max-width: 100%;
+
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%) scale(1);
+
+//     padding: 40px 72px 40px 36px;
+//     // padding: 40px 36px;
+//   }
+
+//   @include breakpoint(desktop) {
+//     max-width: 814px;
+//     // padding: 40px 16px 10px;
+//     padding: 40px 16px;
+//   }
+// }

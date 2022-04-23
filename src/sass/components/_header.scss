@@ -1,0 +1,250 @@
+.header {
+  background-color: #000;
+  &__container {
+    position: relative;
+    height: 230px;
+    padding-top: 40px;
+    background-color: #000;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    @include breakpoint(tablet) {
+      height: 216px;
+    }
+
+    &_home {
+      background-image: $bg-gradient, url(../assets/images/home-mob-1x.jpg);
+
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: $bg-gradient, url(../assets/images/home-mob-2x.jpg);
+      }
+
+      @include breakpoint(tablet) {
+        background-image: $bg-gradient, url(../assets/images/home-tab-1x.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          background-image: $bg-gradient, url(../assets/images/home-tab-2x.jpg);
+        }
+      }
+
+      @include breakpoint(desktop) {
+        background-image: $bg-gradient, url(../assets/images/home-desk-1x.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          background-image: $bg-gradient, url(../assets/images/home-desk-2x.jpg);
+        }
+      }
+    }
+
+    &_library {
+      background-image: $bg-gradient, url(../assets/images/library-mob-1x.jpg);
+
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: $bg-gradient, url(../assets/images/library-mob-2x.jpg);
+      }
+
+      @include breakpoint(tablet) {
+        background-image: $bg-gradient, url(../assets/images/library-tab-1x.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          background-image: $bg-gradient,
+            url(../assets/images/library-tab-2x.jpg);
+        }
+      }
+
+      @include breakpoint(desktop) {
+        background-image: $bg-gradient,
+          url(../assets/images/library-desk-1x.jpg);
+
+        @media (min-device-pixel-ratio: 2),
+          (min-resolution: 192dpi),
+          (min-resolution: 2dppx) {
+          background-image: $bg-gradient,
+            url(../assets/images/library-desk-2x.jpg);
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  &__text {
+    display: none;
+    margin-left: 10px;
+    @include font(500, 30px, 35px, #fff, 0);
+
+    @include breakpoint(tablet) {
+      display: inline-flex;
+    }
+  }
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+
+  &__menu {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    margin-right: 39px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  &__link {
+    color: #fff;
+    font-family: $ff-main;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 21px;
+    text-transform: uppercase;
+
+    &.active {
+      &::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 3px;
+        left: 0px;
+        bottom: 0px;
+        background: $accent-color;
+      }
+    }
+  }
+}
+
+.control-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+
+  @include breakpoint(desktop) {
+    margin-top: 42px;
+  }
+}
+
+.change-lang {
+  position: absolute;
+  right: 15px;
+  bottom: 15px;
+  background-color: transparent;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  @include breakpoint(tablet) {
+    right: 50px;
+    top: auto;
+  }
+  &__item {
+    color: #000000;
+  }
+}
+
+.search-form {
+  @include animate-active();
+  position: relative;
+  display: flex;
+  width: 280px;
+
+  @include breakpoint(tablet) {
+    width: 336px;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 4px;
+    border: none;
+    border-bottom: 0.5px solid #fff;
+    background-color: transparent;
+    outline: none;
+    @include font(400, 14px, 16px, #fff);
+
+    &::placeholder {
+      @include font(400, 14px, 16px, #fff);
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    width: 12px;
+    height: 12px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.header-login-button {
+  @include animate-active();
+}
+
+.change-theme {
+  &__btn {
+    position: absolute;
+    right: 65px;
+    bottom: 5px;
+
+    background-color: initial;
+    align-content: center;
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px 12px;
+
+    @include breakpoint(tablet) {
+      right: 100px;
+      top: auto;
+    }
+  }
+  &__btn-dark {
+    display: none;
+  }
+
+  &__icon {
+    height: 18px;
+    width: 18px;
+    fill: #fff;
+  }
+}

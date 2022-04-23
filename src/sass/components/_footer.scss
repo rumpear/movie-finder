@@ -1,0 +1,43 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  padding: 28px 10px;
+  background-color: $grey-bg;
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  &__text:not(:last-child){
+    margin-right: 5px;
+  }
+
+  &__text {
+    white-space: nowrap;
+    @include font(400, 14px, 26px, $secondary-color);
+
+    &_link {
+      text-decoration: underline;
+    }
+  }
+
+  &__icon {
+    margin-right: 5px;
+  }
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header, .footer {
+  flex: 0 1 auto;
+}
+
+.section, .pagination {
+  flex: 1;
+}

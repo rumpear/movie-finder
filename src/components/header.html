@@ -1,0 +1,122 @@
+<header class="header">
+  <div class="container header__container header__container_home">
+    <nav class="navigation">
+      <a href="#" data-page="home" data-action="go-page" class="logo">
+        <svg class="logo__icon">
+          <use href="./assets/icons/sprite.svg#icon-film"></use>
+        </svg>
+        <h1 class="logo__text">Filmoteka</h1>
+      </a>
+
+      <ul class="navigation__menu">
+        <li class="navigation__item">
+          <a
+            class="navigation__link"
+            init
+            data-action="go-page"
+            data-page="home"
+            data-lang="homeButton"
+            href="#"
+            >Home</a
+          >
+        </li>
+        <li class="navigation__item">
+          <a
+            class="navigation__link"
+            data-action="go-page"
+            data-page="library"
+            data-lang="libraryButton"
+            href="#"
+            >My library</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="control-bar">
+      <form class="search-form active" data-root="search-bar">
+        <label for="movie-search" class="visually-hidden">Search movie</label>
+        <input
+          id="movie-search"
+          name="searchQuery"
+          type="text"
+          class="search-form__input"
+          data-lang="searchInput"
+          placeholder="Search for movies..."
+        />
+
+        <button class="search-form__button" type="submit">
+          <svg class="search-form__icon">
+            <use href="./assets/icons/sprite.svg#icon-search-2"></use>
+          </svg>
+          <span class="visually-hidden">Search</span>
+        </button>
+      </form>
+
+      <ul class="library-menu" data-root="library-buttons">
+        <li class="library-menu__item">
+          <button
+            type="button"
+            data-action="watched"
+            data-lang="watchedLibFolder"
+            class="library-menu__button is-active"
+          >
+            watched
+          </button>
+        </li>
+        <li class="library-menu__item">
+          <button
+            type="button"
+            data-action="queue"
+            data-lang="queueLibFolder"
+            class="library-menu__button"
+          >
+            queue
+          </button>
+        </li>
+        <li class="library-menu__item">
+          <button
+            type="button"
+            class="button-logout"
+            data-lang="logOutButton"
+            data-action="logout"
+          >
+            Log Out
+          </button>
+        </li>
+      </ul>
+
+      <div class="header-login-button" data-root="header-login">
+        <button class="login-button" data-action="login-google">
+          <img
+            class="login-button__icon"
+            src="./assets/icons/google-logo.svg"
+            alt="google-icon"
+          />
+          <span class="login-button__title" data-lang="singInButton"
+            >Sign in with Google</span
+          >
+        </button>
+      </div>
+      <div class="change-theme">
+        <button class="change-theme__btn-dark" type="button">
+          <svg class="change-theme__icon">
+            <use href="./assets/icons/sprite.svg#moon"></use>
+          </svg>
+        </button>
+        <button class="change-theme__btn" type="button" id="change-theme__btn">
+          <svg class="change-theme__icon">
+            <use href="./assets/icons/sprite.svg#sun"></use>
+          </svg>
+        </button>
+      </div>
+
+      <select class="change-lang">
+        <option class="change-lang__item" value="en">EN</option>
+        <!-- <option class="change-lang__item" value="de">DE</option> -->
+        <option class="change-lang__item" value="uk">UA</option>
+        <option class="change-lang__item" value="ru">RU</option>
+      </select>
+    </div>
+  </div>
+</header>

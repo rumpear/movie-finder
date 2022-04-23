@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="The Movie Data Base search integration and Saving your favorite movies in Firestore. Javascript Project"
+    />
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <title>Filmoteka | Search movies</title>
+  </head>
+  <body class="light-theme">
+    <include src="components/modal.html"></include>
+
+    <include src="components/header.html"></include>
+    <include src="components/gallery.html"></include>
+
+    <include src="components/pagination.html"></include>
+    <include src="components/footer.html"></include>
+
+    <button class="btn-up is-hidden" data-action="scroll-up">
+      <svg class="btn-up__icon" width="20" height="20">
+        <use href="./assets/icons//sprite.svg#icon-up-arrow"></use>
+      </svg>
+    </button>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>

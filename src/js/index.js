@@ -14,6 +14,7 @@ import './handlers/handleAuthorsModal';
 import './handlers/handleCategory';
 import './handlers/handleSearchType';
 import './handlers/handleGenresSelection';
+import './handlers/genres/handleGenre';
 
 import { openDetails } from './handlers/handleDetails';
 
@@ -24,6 +25,8 @@ import { initLibrary } from './pages/library';
 
 import { changeLanguage } from './utils/changeLanguage';
 import { removeQuery } from './utils/removeQuery';
+
+import { clearCheckboxOnGenres } from './utils/clearCheckboxOnGenres';
 
 (async () => {
   const { menuLinks, homeLink } = store.refs;
@@ -61,4 +64,6 @@ import { removeQuery } from './utils/removeQuery';
     removeQuery();
     openDetails(null, params.get('id'), params.get('category'));
   }
+
+  clearCheckboxOnGenres();
 })();

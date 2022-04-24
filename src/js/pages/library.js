@@ -16,6 +16,7 @@ export const initLibrary = () => {
 
   rootHeader.classList.add('header__container_library');
   rootHeader.classList.remove('header__container_home');
+
   categoriesRoot.classList.add('is-closed');
   typeRoot.classList.add('is-closed');
 
@@ -25,6 +26,9 @@ export const initLibrary = () => {
   store.page = 1;
 
   showLibSelector();
+
+  const genresRef = document.querySelector('.genres');
+  genresRef.style.display = 'none';
 
   if (checkToken()) {
     handleGallery();

@@ -6,7 +6,7 @@
   "homepage": "https://rumpear.github.io/movie-finder",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /movie-modal/"
+    "build": "parcel build src/*.html --public-url /movie-finder/"
   },
   "repository": {
     "type": "git",

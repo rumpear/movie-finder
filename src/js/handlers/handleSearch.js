@@ -19,10 +19,13 @@ const handleSearch = (e) => {
     store.refs.categoriesRoot.classList.add('is-closed');
     store.refs.typeRoot.classList.remove('is-closed');
 
+    const genresRef = document.querySelector('.genres');
+    genresRef.style.display = 'none';
+
     handleGallery();
   }
 
   e.target.reset();
 };
 
-store.refs.refSearchform.addEventListener('submit', handleSearch);
+store.refs.refSearchForm.addEventListener('submit', handleSearch);

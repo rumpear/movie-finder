@@ -3,9 +3,9 @@ import { store } from '../store';
 import { clearActive } from '../utils/clearClasses';
 
 export const showSearchForm = () => {
-  const { refSearchform, rootControl } = store.refs;
+  const { refSearchForm, rootControl } = store.refs;
 
   clearActive(rootControl);
 
-  refSearchform.classList.add('active');
+  refSearchForm.classList.add('active');
 };

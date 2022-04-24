@@ -23,7 +23,7 @@ export const store = {
     menuLinks: document.querySelectorAll('.navigation__link'),
     refsLink: document.querySelectorAll('[data-action="go-page"]'),
     homeLink: document.querySelector('[init]'),
-    refSearchform: document.querySelector('[data-root="search-bar"]'),
+    refSearchForm: document.querySelector('[data-root="search-bar"]'),
     refLibsSelect: document.querySelector('[data-root="library-buttons"]'),
     refLoginHeader: document.querySelector('[data-root="header-login"]'),
     btnLogin: document.querySelector('[data-action="login-google"]'),

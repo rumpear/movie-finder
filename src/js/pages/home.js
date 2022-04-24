@@ -8,8 +8,12 @@ export const initHome = () => {
 
   rootHeader.classList.remove('header__container_library');
   rootHeader.classList.add('header__container_home');
+  
   categoriesRoot.classList.remove('is-closed');
   typeRoot.classList.add('is-closed');
+
+  const genresRef = document.querySelector('.genres');
+  genresRef.style.display = 'flex';
 
   localStorage.setItem('page', 'home');
 

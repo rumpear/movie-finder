@@ -11,7 +11,7 @@ import { renderEmptyGallery } from '../render/renderEmptyGallery';
 import { renderPagination } from '../render/renderPagination';
 
 export const initLibrary = () => {
-  const { rootHeader, categoriesRoot, typeRoot } = store.refs;
+  const { rootHeader, categoriesRoot, typeRoot, genresRoot } = store.refs;
   const { language } = store;
 
   rootHeader.classList.add('header__container_library');
@@ -27,8 +27,7 @@ export const initLibrary = () => {
 
   showLibSelector();
 
-  const genresRef = document.querySelector('.genres');
-  genresRef.style.display = 'none';
+  genresRoot.style.display = 'none';
 
   if (checkToken()) {
     handleGallery();

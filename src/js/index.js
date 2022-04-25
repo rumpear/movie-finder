@@ -14,7 +14,7 @@ import './handlers/handleAuthorsModal';
 import './handlers/handleCategory';
 import './handlers/handleSearchType';
 import './handlers/handleGenresSelection';
-import './handlers/genres/handleGenre';
+import './handlers/handleGenre';
 
 import { openDetails } from './handlers/handleDetails';
 

@@ -33,6 +33,7 @@ export const store = {
     scrollUpBtn: document.querySelector('[data-action="scroll-up"]'),
     categoriesRoot: document.querySelector('#categories'),
     categoryButtons: document.querySelectorAll('[name="category"]'),
+    genresRoot: document.querySelector('.genres'),
     genreButtons: document.querySelectorAll('[name="genres"]'),
     typeRoot: document.querySelector('#type'),
     typeButtons: document.querySelectorAll('[name="type"]'),

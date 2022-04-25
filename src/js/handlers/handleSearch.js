@@ -19,8 +19,7 @@ const handleSearch = (e) => {
     store.refs.categoriesRoot.classList.add('is-closed');
     store.refs.typeRoot.classList.remove('is-closed');
 
-    const genresRef = document.querySelector('.genres');
-    genresRef.style.display = 'none';
+    store.refs.genresRoot.style.display = 'none';
 
     handleGallery();
   }

@@ -110,9 +110,22 @@
 
 .gallery-bnt-wrapper {
   display: flex;
-  // justify-content: center;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $desktop) {
+    margin-bottom: 5px;
+    justify-content: center;
+  }
+}
+
+.genres {
+  flex-wrap: wrap;
+  @media screen and (max-width: $desktop) {
+    margin-bottom: 5px;
+    justify-content: center;
+  }
 }
 
 .genres__label {

@@ -10,5 +10,5 @@ export const filterGenres = (genres, ids) => {
     if (str) return str;
   }
 
-  return '';
+  return 'Genre unknown';
 };

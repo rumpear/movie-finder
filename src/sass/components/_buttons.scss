@@ -234,7 +234,7 @@ html {
   &__label {
     display: block;
     margin-right: 5px;
-    padding: 5px 10px;
+    padding: 5px 7px;
     border-radius: 5px;
     color: $black-color;
     background-color: $white-color;
@@ -245,10 +245,63 @@ html {
       color: $white-color;
       background-color: $accent-color;
     }
+
+    &:last-child {
+      margin-right: 0;
+    }
   }
 
   &__input:checked + &__label {
     color: $white-color;
     background-color: $accent-color;
   }
+}
+
+.gallery-bnt-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: $desktop) {
+    margin-bottom: 5px;
+    justify-content: center;
+  }
+}
+
+.genres {
+  flex-wrap: wrap;
+  @media screen and (max-width: $desktop) {
+    justify-content: center;
+  }
+}
+
+.genres__label {
+  margin-right: 5px;
+  padding: 5px 7px;
+
+  border-radius: 5px;
+  color: $black-color;
+  background-color: $white-color;
+  transition: background-color $ease-transition, color $ease-transition;
+
+  cursor: pointer;
+
+  @media screen and (max-width: $desktop) {
+    margin-bottom: 5px;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    color: $white-color;
+    background-color: $accent-color;
+  }
+}
+
+.genres__input:checked + .genres__label {
+  color: $white-color;
+  background-color: $accent-color;
 }

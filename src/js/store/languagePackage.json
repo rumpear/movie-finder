@@ -1,204 +1,222 @@
 {
   "homeButton": {
     "en": "home",
-    "de": "homepage",
     "uk": "головна",
     "ru": "главная"
   },
   "libraryButton": {
     "en": "my library",
-    "de": "meine Bibliothek",
     "uk": "моя бібліотека",
     "ru": "моя библиотека"
   },
   "searchInput": {
     "en": "Search for movies...",
-    "de": "Suche nach Filmen...",
     "uk": "Пошук фільмів за назвою",
     "ru": "Поиск фильмов по названию"
   },
   "watchedLibFolder": {
     "en": "Watched",
-    "de": "Schaute",
     "uk": "Переглянуто",
     "ru": "Просмотренные"
   },
   "queueLibFolder": {
     "en": "Queue",
-    "de": "Warteschlange",
     "uk": "Черга",
     "ru": "Очередь"
   },
+
   "singInButton": {
     "en": "Sign in with Google",
-    "de": "Mit Google einloggen",
     "uk": "Увійти через Google",
     "ru": "Войти через Google"
   },
 
   "categoryAllBtn": {
     "en": "All",
-    "de": "Alles",
     "uk": "Усі",
     "ru": "Все"
   },
+
   "categoryMoviesBtn": {
     "en": "Movies",
-    "de": "Filme",
     "uk": "Фільми",
     "ru": "Фильмы"
   },
   "categoryTvBtn": {
     "en": "TV shows",
-    "de": "Fernsehshows",
     "uk": "Серіали",
     "ru": "Сериалы"
   },
 
+  "genresComedyBtn": {
+    "en": "Comedy",
+    "uk": "Комедія",
+    "ru": "Комедия"
+  },
+
+  "genresDramaBtn": {
+    "en": "Drama",
+    "uk": "Драма",
+    "ru": "Драма"
+  },
+
+  "genresCrimeBtn": {
+    "en": "Crime",
+    "uk": "Кримінал",
+    "ru": "Криминал"
+  },
+
+  "genresAnimationBtn": {
+    "en": "Animation",
+    "uk": "Анімація",
+    "ru": "Анимация"
+  },
+
+  "genresFamilyBtn": {
+    "en": "Family",
+    "uk": "Сімейні",
+    "ru": "Семейные"
+  },
+
+  "genresWesternBtn": {
+    "en": "Western",
+    "uk": "Вестерн",
+    "ru": "Вестерн"
+  },
+
+  "genresMysteryBtn": {
+    "en": "Mystery",
+    "uk": "Містика",
+    "ru": "Мистика"
+  },
+
+  "genresDocumentaryBtn": {
+    "en": "Documentary",
+    "uk": "Документалки",
+    "ru": "Документалки"
+  },
+
   "logOutButton": {
     "en": "Log Out",
-    "de": "Ausloggen",
     "uk": "Вийти",
     "ru": "Выйти"
   },
   "footerCopyright": {
     "en": "© 2022 | All Rights Reserved |",
-    "de": "© 2022 | Alle Rechte vorbehalten |",
     "uk": "© 2022 | Усі права захищені |",
     "ru": "© 2022 | Все права защищены |"
   },
   "footerDeveloped": {
     "en": "Developed with",
-    "de": "Entwickelt mit",
     "uk": "Зроблено",
     "ru": "Сделано"
   },
   "footerBy": {
     "en": "by",
-    "de": "von",
+
     "uk": "",
     "ru": ""
   },
   "footerAuthors": {
     "en": "GoIT Students",
-    "de": "GoIT Studenten",
     "uk": "Студентами GoIT",
     "ru": "Студентами GoIT"
   },
 
   "modalVotes": {
     "en": "Vote / Votes",
-    "de": "Bewertung/Stimmen",
     "uk": "Рейтинг/Голоси",
     "ru": "Рейтинг/Голоса"
   },
   "modalPopularity": {
     "en": "Popularity",
-    "de": "Popularität",
     "uk": "Популярність",
     "ru": "Популярность"
   },
   "modalTitle": {
     "en": "Original Title",
-    "de": "Originaler Titel",
     "uk": "Ориг. назва",
     "ru": "Ориг. название"
   },
   "modalDates": {
     "en": "Release",
-    "de": "Release",
     "uk": "Реліз",
     "ru": "Релиз"
   },
   "modalGenres": {
     "en": "Genre",
-    "de": "Genre",
     "uk": "Жанр",
     "ru": "Жанр"
   },
   "modalAbout": {
     "en": "About",
-    "de": "Über",
     "uk": "Про фільм",
     "ru": "Про фильм"
   },
 
   "watchedAddButton": {
     "en": "add to watched",
-    "de": "zu beobachtet hinzufügen",
     "uk": "до переглянутих",
     "ru": "в просмотренные"
   },
   "queueAddButton": {
     "en": "add to queue",
-    "de": "zur Warteschlange hinzufügen",
     "uk": "в чергу",
     "ru": "в очередь"
   },
   "watchedRemoveButton": {
     "en": "remove from watched",
-    "de": "aus der Beobachtung entfernen",
     "uk": "прибрати з переглянутих",
     "ru": "убрать из просмотренных"
   },
   "queueRemoveButton": {
     "en": "remove from queue",
-    "de": "aus Warteschlange entfernen",
     "uk": "прибрати з черги",
     "ru": "убрать из очереди"
   },
   "shareButtons": {
     "en": "Share:",
-    "de": "Teilen:",
     "uk": "Поділитися:",
     "ru": "Поделиться:"
   },
   "shareLinkButton": {
     "en": "Link copied",
-    "de": "Link kopiert",
     "uk": "Посилання скопійовано",
     "ru": "Ссылка скопирована"
   },
   "shareText": {
     "en": "Hey! Look which movie I liked",
-    "de": "Hey! Schau mal, welcher Film mir gefallen hat",
     "uk": "Хей! Дивись який фільм мені сподобався",
     "ru": "Эй! Смотри какой фильм мне понравился"
   },
 
   "messageNothingFound": {
-    "en": "Oops... here's nothing to show",
-    "de": "Hoppla... hier ist nichts zu zeigen",
+    "en": "Oops... there's nothing to show here",
     "uk": "Упс... а тут нічого немає",
     "ru": "Упс... а тут ничего нет"
   },
   "messageErrorSearch": {
     "en": "Nothing was found",
-    "de": "Es wurde nichts gefunden",
     "uk": "Нічого не знайдено",
     "ru": "Ничего не найдено"
   },
   "messageAuthLibrary": {
     "en": "Sign in to add movies to your library",
-    "de": "Melden Sie sich an, um Ihrer Bibliothek Filme hinzuzufügen",
     "uk": "Увійдіть до облікового запису, щоб додати фільми до бібліотеки",
     "ru": "Войдите в аккаунт, чтобы добавить фильмы в библиотеку"
   },
   "messageEmptyLibrary": {
     "en": "You haven't added anything to the library yet",
-    "de": "Sie haben der Bibliothek noch nichts hinzugefügt",
     "uk": "Ви ще нічого не додали до бібліотеки",
     "ru": "Вы еще ничего не добавили в библиотеку"
   },
   "messageNotFound": {
     "en": "Movie not found",
-    "de": "Film nicht gefunden",
     "uk": "Фільм не знайдено",
     "ru": "Фильм не найден"
   },
   "authorsTitle": {
     "en": "Authors",
-    "de": "Autoren",
     "uk": "Автори",
     "ru": "Авторы"
   }

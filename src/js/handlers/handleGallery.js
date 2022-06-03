@@ -12,7 +12,6 @@ import { renderEmptyGallery } from '../render/renderEmptyGallery';
 import { handleNotification } from './handleNotification';
 
 import { fetchMovieByGenres } from '../services/serviceMoviesAPI';
-// import { getGenreId } from './handleGenresSelection';
 import { fetchTopRatedMovie } from '../services/serviceMoviesAPI';
 
 export const handleGallery = () => {
@@ -49,7 +48,7 @@ export const handleGallery = () => {
   if (mode === 'genres') {
     const category = store.searchType;
     const genres = store.genreId;
-    console.log(genres);
+    // console.log(genres);
     fetchMovieByGenres(language, page, category, genres).then((res) => {
       const { results, total_pages } = res;
       // console.log(list);

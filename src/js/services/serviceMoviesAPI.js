@@ -64,14 +64,15 @@ export const fetchSingleMovie = async (language = 'en-US', id, category) => {
     .then((res) => ({ ...res.data }))
     .catch((e) => console.error(e));
 
-  const cast = await axios
-    .get(`/${category}/${id}/credits`, {
-      params: { language },
-    })
-    .then((res) => [...res.data.cast])
-    .catch((e) => console.error(e));
+  // const cast = await axios
+  //   .get(`/${category}/${id}/credits`, {
+  //     params: { language },
+  //   })
+  //   .then((res) => [...res.data.cast])
+  //   .catch((e) => console.error(e));
 
-  return { ...details, cast };
+  // return { ...details, cast };
+  return { ...details };
 };
 
 // export const fetchSingleMovieWithCast = async (language = 'en-US', id, category) => {
@@ -108,14 +109,14 @@ export const fetchMovieByGenres = async (
   genres
 ) => {
   try {
-    console.log(genres);
-    console.log(category);
+    // console.log(genres);
+    // console.log(category);
 
     const { data } = await axios.get(
       `/discover/${category}?api_key=5e25dc89cc9570e2f881766abec20685&sort_by=popularity.desc&page=1&with_genres=${genres}`,
       { params: { language, page } }
     );
-    console.log(data);
+    // console.log(data);
     // console.log(page);
     return data;
 

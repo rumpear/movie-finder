@@ -52,8 +52,7 @@ export const handleGallery = () => {
 
       // return target;
 
-      // const genre = 37;
-      console.log(genres);
+      // console.log(genres);
       fetchMovieByGenres(language, page, genres, category).then((res) => {
         const { results, total_pages } = res;
         // console.log(genre);
@@ -76,10 +75,9 @@ export const handleGallery = () => {
   const onDivClick = (e) => {
     const { mode } = store;
     mode = 'genres';
-    console.log(mode);
+    // console.log(mode);
     const genres = e.target.dataset.action;
-    console.log(genres);
-    
+    // console.log(genres);
   };
   div.addEventListener('click', onDivClick);
 

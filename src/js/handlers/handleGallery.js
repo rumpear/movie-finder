@@ -16,16 +16,12 @@ import { fetchTopRatedMovie } from '../services/serviceMoviesAPI';
 
 export const handleGallery = () => {
   const { mode, page, query, language, user, category } = store;
-  // console.log(mode);
   renderSkeletonGallery();
 
   if (mode === 'trend' || mode === 'find') {
-    const fetchMethod = mode === 'find' ? fetchSearch : fetchTrending; //fetchMovieByGenres; //fetchTrending
-    const category = mode === 'find' ? store.searchType : store.category; //trend : all
+    const fetchMethod = mode === 'find' ? fetchSearch : fetchTrending;
+    const category = mode === 'find' ? store.searchType : store.category;
 
-    // console.log(store.searchType);
-    // console.log(store.category);
-    // fetch(fetchTrending);
     fetchMethod(language, page, category, query).then((res) => {
       const { list, totalItems } = res;
 
@@ -48,11 +44,10 @@ export const handleGallery = () => {
   if (mode === 'genres') {
     const category = store.searchType;
     const genres = store.genreId;
-    // console.log(genres);
+
     fetchMovieByGenres(language, page, category, genres).then((res) => {
       const { results, total_pages } = res;
-      // console.log(list);
-      // console.log(totalItems);
+
       if (!total_pages) {
         renderEmptyGallery();
 
@@ -86,57 +81,4 @@ export const handleGallery = () => {
       renderEmptyGallery();
     }
   }
-};
-
-// export const handleGenresGallery = () => {
-//   const { mode, page, query, language, user, category } = store;
-//   let genres = store.genreId;
-//   fetchMovieByGenres(language, page, genres).then((res) => {
-//     const { results, total_pages } = res;
-//     // console.log(list);
-//     // console.log(totalItems);
-//     if (!total_pages) {
-//       renderEmptyGallery();
-
-//       return handleSearchError(
-//         'Search result not successful. Enter the correct movie name'
-//       );
-//     }
-
-//     renderPagination(total_pages);
-//     renderGallery(results);
-//   });
-// };
-
-// const div = document.querySelector('.genres');
-// const onDivClick = (e) => {
-//   let { mode } = store;
-//   mode = 'genres';
-//   console.log(mode);
-//   const genres = e.target.dataset.action;
-//   console.log(genres);
-//   handleGallery();
-// };
-// div.addEventListener('click', onDivClick);
-
-const onTopRatedBtnClick = () => {
-  store.category = 'top-movies';
-};
-
-const fetch = (fetchMethod) => {
-  const { mode, page, query, language, user, category } = store;
-  fetchMethod(language, page, category, query).then((res) => {
-    const { list, totalItems } = res;
-
-    if (!totalItems) {
-      renderEmptyGallery();
-
-      handleNotification('error', languagePackage.messageErrorSearch[language]);
-
-      return;
-    }
-
-    if (page === 1) renderPagination(totalItems);
-    list.length && renderGallery(list);
-  });
 };
